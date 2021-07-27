@@ -14,6 +14,8 @@ protocol LoginRouterProtocol {
     
     var entry: EntryPoint? { get }
     static func start() -> LoginRouterProtocol
+    
+    func openCollection()
 }
 
 class LoginRouter: LoginRouterProtocol {
@@ -37,6 +39,12 @@ class LoginRouter: LoginRouterProtocol {
         router.entry = view as? EntryPoint
         
         return router
+    }
+    
+    func openCollection() {
+        let vc = CollectionRouter.start()
+        let destVc = vc.entry
+        entry?.navigationController?.pushViewController(destVc!, animated: true)
     }
     
 }

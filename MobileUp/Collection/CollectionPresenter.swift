@@ -11,6 +11,8 @@ protocol CollectionPresenterProtocol {
     var router: CollectionRouterProtocol? { get set }
     var interactor: CollectionInteractorProtocol? { get set }
     var view: CollectionViewControllerProtocol? { get set }
+    
+    func openPhoto()
 }
 
 class CollectionPresenter: CollectionPresenterProtocol {
@@ -19,4 +21,7 @@ class CollectionPresenter: CollectionPresenterProtocol {
     var interactor: CollectionInteractorProtocol?
     var view: CollectionViewControllerProtocol?
     
+    func openPhoto() {
+        router?.openPhotoScreen()
+    }
 }

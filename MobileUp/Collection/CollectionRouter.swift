@@ -12,6 +12,8 @@ protocol CollectionRouterProtocol {
     
     var entry: UIViewController? { get }
     static func start() -> CollectionRouterProtocol
+    
+    func openPhotoScreen()
 }
 
 class CollectionRouter: CollectionRouterProtocol {
@@ -37,4 +39,9 @@ class CollectionRouter: CollectionRouterProtocol {
         return router
     }
     
+    func openPhotoScreen() {
+        let vc = PhotoRouter.start()
+        let destVc = vc.entry
+        entry?.navigationController?.pushViewController(destVc!, animated: true)
+    }
 }

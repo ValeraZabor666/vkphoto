@@ -21,6 +21,6 @@ class LoginPresenter: LoginPresenterProtocol {
     var view: LoginViewControllerProtocol?
     
     func authentication() {
-        <#code#>
+        router?.openCollection()
     }
 }
