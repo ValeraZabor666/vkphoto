@@ -40,6 +40,10 @@ class PhotoViewController: UIViewController, PhotoViewControllerProtocol {
     }
     
     @objc func savePhoto() {
+        let items: [Any] = [UIImage(named: "123")!]
         
+        let avc = UIActivityViewController(activityItems: items,
+                                           applicationActivities: nil)
+        self.present(avc, animated: true, completion: nil)
     }
 }

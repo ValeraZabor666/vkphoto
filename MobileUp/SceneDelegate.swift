@@ -6,11 +6,18 @@
 //
 
 import UIKit
+import VK_ios_sdk
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, AuthServiceDelegete {
 
     var window: UIWindow?
-
+    var authService: AuthService!
+    
+    static func shared() -> SceneDelegate {
+        let scene = UIApplication.shared.connectedScenes.first
+        let sd: SceneDelegate = (scene?.delegate as? SceneDelegate)!
+        return sd
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -19,10 +26,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let loginScreenRouter = LoginRouter.start()
         let initialVC = loginScreenRouter.entry
         
+        authService = AuthService()
+        authService.delegate = self
+        
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = UINavigationController(rootViewController: initialVC!)
         self.window = window
         window.makeKeyAndVisible()
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let url = URLContexts.first?.url {
+            VKSdk.processOpen(url,
+                              fromApplication: UIApplication.OpenURLOptionsKey.sourceApplication.rawValue)
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -56,6 +73,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
+    func authServiceShouldShow(viewController: UIViewController) {
+        print(#function)
+        window?.rootViewController?.present(viewController, animated: true, completion: nil)
+    }
+    
+    func authServiceSignIn() {
+        print(#function)
+        let collectionScreenRouter = CollectionRouter.start()
+        let collectionVC = (collectionScreenRouter.entry)!
+        window?.rootViewController = UINavigationController(rootViewController: collectionVC)
+    }
+    
+    func authServiceSignInDidFail() {
+        print(#function)
+    }
 
 }
 

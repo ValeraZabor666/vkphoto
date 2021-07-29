@@ -17,4 +17,14 @@ class CollectionInteractor: CollectionInteractorProtocol{
     
     var presenter: CollectionPresenterProtocol?
     
+    func getURL() {
+        var components = URLComponents()
+//        let params
+        components.scheme = "https"
+        components.host = "api.vk.com"
+        components.path = "/method/photos.get"
+//        components.queryItems
+//        "5.131"
+    }
+    
 }

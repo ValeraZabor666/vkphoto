@@ -20,6 +20,7 @@ class CollectionViewController: UIViewController, CollectionViewControllerProtoc
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionView()
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -59,4 +60,6 @@ class CollectionViewController: UIViewController, CollectionViewControllerProtoc
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         presenter?.openPhoto()
     }
+    
+    
 }

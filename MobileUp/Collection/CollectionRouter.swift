@@ -8,9 +8,11 @@
 import Foundation
 import UIKit
 
+typealias EntryPoint2 =  CollectionViewControllerProtocol & UIViewController
+
 protocol CollectionRouterProtocol {
     
-    var entry: UIViewController? { get }
+    var entry: EntryPoint2? { get }
     static func start() -> CollectionRouterProtocol
     
     func openPhotoScreen()
@@ -18,7 +20,7 @@ protocol CollectionRouterProtocol {
 
 class CollectionRouter: CollectionRouterProtocol {
     
-    var entry: UIViewController?
+    var entry: EntryPoint2?
     
     static func start() -> CollectionRouterProtocol {
         let router = CollectionRouter()
@@ -34,7 +36,7 @@ class CollectionRouter: CollectionRouterProtocol {
         presenter.interactor = interactor
         presenter.router = router
         
-        router.entry = view as? UIViewController
+        router.entry = view as? EntryPoint2
         
         return router
     }

@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import SnapKit
+//import VK_ios_sdk
 
 protocol LoginViewControllerProtocol {
     var presenter: LoginPresenterProtocol? { get set }
@@ -17,9 +18,13 @@ class LoginViewController: UIViewController, LoginViewControllerProtocol {
     
     var presenter: LoginPresenterProtocol?
     private var loginButton = UIButton()
+    private var authService: AuthService!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        authService = SceneDelegate.shared().authService
+        
         setAppearance()
         setButton()
     }
@@ -44,7 +49,8 @@ class LoginViewController: UIViewController, LoginViewControllerProtocol {
     }
     
     @objc func loginAction() {
-        presenter?.authentication()
+        authService.wakeUpSession()
+//        presenter?.authentication()
     }
     
     private func setConstraints() {
@@ -55,4 +61,5 @@ class LoginViewController: UIViewController, LoginViewControllerProtocol {
             maker.height.equalTo(view.frame.height / 5)
         }
     }
+    
 }

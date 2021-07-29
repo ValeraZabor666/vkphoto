@@ -29,9 +29,11 @@
 		0479956926B001A900D0EDAB /* PhotoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479956826B001A900D0EDAB /* PhotoPresenter.swift */; };
 		0479956E26B001B200D0EDAB /* PhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479956D26B001B200D0EDAB /* PhotoEntity.swift */; };
 		0479957326B001C300D0EDAB /* PhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479957226B001C300D0EDAB /* PhotoRouter.swift */; };
-		168BCCCEFA39CD178E15204D /* Pods_MobileUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35012A7D9A513BB31A35B0FC /* Pods_MobileUpTests.framework */; };
-		A22581EE5697B0E4138634F6 /* Pods_MobileUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E571EA29D43C882AD54823 /* Pods_MobileUp.framework */; };
-		C86298403D2D9C8CE0503D35 /* Pods_MobileUp_MobileUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E612162586196E18D1874D56 /* Pods_MobileUp_MobileUpUITests.framework */; };
+		047996CC26B16B4B00D0EDAB /* Pods_MobileUp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79E571EA29D43C882AD54823 /* Pods_MobileUp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		047996F626B2A3EC00D0EDAB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047996F526B2A3EC00D0EDAB /* AuthService.swift */; };
+		4C2CAF00FC8E9C83E0C086D8 /* Pods_MobileUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250C6CC7228FD6EACC65CB70 /* Pods_MobileUpTests.framework */; };
+		A05165E1EF4537BB0D628023 /* Pods_MobileUp_MobileUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51BCBFCF9555BB2E955014D /* Pods_MobileUp_MobileUpUITests.framework */; };
+		B87C14B83367102F9542C700 /* Pods_MobileUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6390C1F5C052F2A97803B5C2 /* Pods_MobileUp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,20 @@
 			remoteInfo = MobileUp;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		047996C826B16B4800D0EDAB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				047996CC26B16B4B00D0EDAB /* Pods_MobileUp.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0476AD9026AF510100FFE7BA /* MobileUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,15 +96,21 @@
 		0479956826B001A900D0EDAB /* PhotoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPresenter.swift; sourceTree = "<group>"; };
 		0479956D26B001B200D0EDAB /* PhotoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEntity.swift; sourceTree = "<group>"; };
 		0479957226B001C300D0EDAB /* PhotoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRouter.swift; sourceTree = "<group>"; };
-		35012A7D9A513BB31A35B0FC /* Pods_MobileUpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileUpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		047996C526B16B4800D0EDAB /* VK_ios_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VK_ios_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		047996CF26B16B4E00D0EDAB /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		047996E426B17B2D00D0EDAB /* libSnapKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSnapKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		047996E626B17B3200D0EDAB /* libVK-ios-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libVK-ios-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		047996F526B2A3EC00D0EDAB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		250C6CC7228FD6EACC65CB70 /* Pods_MobileUpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileUpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		392821F80E748A8E05B2E3FF /* Pods-MobileUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileUpTests.release.xcconfig"; path = "Target Support Files/Pods-MobileUpTests/Pods-MobileUpTests.release.xcconfig"; sourceTree = "<group>"; };
 		502D4D52C21A4D7F78C98A91 /* Pods-MobileUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileUpTests.debug.xcconfig"; path = "Target Support Files/Pods-MobileUpTests/Pods-MobileUpTests.debug.xcconfig"; sourceTree = "<group>"; };
 		56166E691ABF4105BBF27247 /* Pods-MobileUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileUp.release.xcconfig"; path = "Target Support Files/Pods-MobileUp/Pods-MobileUp.release.xcconfig"; sourceTree = "<group>"; };
+		6390C1F5C052F2A97803B5C2 /* Pods_MobileUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DEECCD21110AC7F8831CC24 /* Pods-MobileUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileUp.debug.xcconfig"; path = "Target Support Files/Pods-MobileUp/Pods-MobileUp.debug.xcconfig"; sourceTree = "<group>"; };
 		79E571EA29D43C882AD54823 /* Pods_MobileUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		897CB1DBFBFEC7457BCB5CB7 /* Pods-MobileUp-MobileUpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileUp-MobileUpUITests.release.xcconfig"; path = "Target Support Files/Pods-MobileUp-MobileUpUITests/Pods-MobileUp-MobileUpUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B1E58C97E5C5B734740E00AD /* Pods-MobileUp-MobileUpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileUp-MobileUpUITests.debug.xcconfig"; path = "Target Support Files/Pods-MobileUp-MobileUpUITests/Pods-MobileUp-MobileUpUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		E612162586196E18D1874D56 /* Pods_MobileUp_MobileUpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileUp_MobileUpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C51BCBFCF9555BB2E955014D /* Pods_MobileUp_MobileUpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileUp_MobileUpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A22581EE5697B0E4138634F6 /* Pods_MobileUp.framework in Frameworks */,
+				B87C14B83367102F9542C700 /* Pods_MobileUp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				168BCCCEFA39CD178E15204D /* Pods_MobileUpTests.framework in Frameworks */,
+				4C2CAF00FC8E9C83E0C086D8 /* Pods_MobileUpTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C86298403D2D9C8CE0503D35 /* Pods_MobileUp_MobileUpUITests.framework in Frameworks */,
+				A05165E1EF4537BB0D628023 /* Pods_MobileUp_MobileUpUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +150,7 @@
 				0476AD9126AF510100FFE7BA /* Products */,
 				7907CC8D0F6FC6A76DD1B459 /* Pods */,
 				7C1C106727C39307D5C3F1E1 /* Frameworks */,
+				047996E326B17AF100D0EDAB /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +167,7 @@
 		0476AD9226AF510100FFE7BA /* MobileUp */ = {
 			isa = PBXGroup;
 			children = (
+				047996F426B2A3D100D0EDAB /* Services */,
 				0479952826B0007D00D0EDAB /* Photo */,
 				0479952726B0002B00D0EDAB /* Collection */,
 				0479952626B0002600D0EDAB /* Login */,
@@ -211,6 +235,22 @@
 			path = Photo;
 			sourceTree = "<group>";
 		};
+		047996E326B17AF100D0EDAB /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				79E571EA29D43C882AD54823 /* Pods_MobileUp.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		047996F426B2A3D100D0EDAB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				047996F526B2A3EC00D0EDAB /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		7907CC8D0F6FC6A76DD1B459 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,9 +267,13 @@
 		7C1C106727C39307D5C3F1E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				79E571EA29D43C882AD54823 /* Pods_MobileUp.framework */,
-				E612162586196E18D1874D56 /* Pods_MobileUp_MobileUpUITests.framework */,
-				35012A7D9A513BB31A35B0FC /* Pods_MobileUpTests.framework */,
+				047996E626B17B3200D0EDAB /* libVK-ios-sdk.a */,
+				047996E426B17B2D00D0EDAB /* libSnapKit.a */,
+				047996CF26B16B4E00D0EDAB /* SnapKit.framework */,
+				047996C526B16B4800D0EDAB /* VK_ios_sdk.framework */,
+				6390C1F5C052F2A97803B5C2 /* Pods_MobileUp.framework */,
+				C51BCBFCF9555BB2E955014D /* Pods_MobileUp_MobileUpUITests.framework */,
+				250C6CC7228FD6EACC65CB70 /* Pods_MobileUpTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -245,7 +289,8 @@
 				0476AD8C26AF510100FFE7BA /* Sources */,
 				0476AD8D26AF510100FFE7BA /* Frameworks */,
 				0476AD8E26AF510100FFE7BA /* Resources */,
-				51A8531706ED78A36FBB4143 /* [CP] Embed Pods Frameworks */,
+				047996C826B16B4800D0EDAB /* Embed Frameworks */,
+				1795EB4154FA61ACC7274741 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,7 +328,7 @@
 				0476ADB026AF510400FFE7BA /* Sources */,
 				0476ADB126AF510400FFE7BA /* Frameworks */,
 				0476ADB226AF510400FFE7BA /* Resources */,
-				C035B7CEF3E817E7BBBB1439 /* [CP] Embed Pods Frameworks */,
+				E21E392FC529BC948C31DE45 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -364,7 +409,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		51A8531706ED78A36FBB4143 /* [CP] Embed Pods Frameworks */ = {
+		1795EB4154FA61ACC7274741 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -403,7 +448,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C035B7CEF3E817E7BBBB1439 /* [CP] Embed Pods Frameworks */ = {
+		E21E392FC529BC948C31DE45 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -477,6 +522,7 @@
 				0479955526B0017200D0EDAB /* CollectionEntity.swift in Sources */,
 				0476AD9426AF510100FFE7BA /* AppDelegate.swift in Sources */,
 				0479957326B001C300D0EDAB /* PhotoRouter.swift in Sources */,
+				047996F626B2A3EC00D0EDAB /* AuthService.swift in Sources */,
 				0479956426B0019E00D0EDAB /* PhotoInteractor.swift in Sources */,
 				0479955026B0016700D0EDAB /* CollectionPresenter.swift in Sources */,
 				0479956E26B001B200D0EDAB /* PhotoEntity.swift in Sources */,

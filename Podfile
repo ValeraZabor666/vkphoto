@@ -8,6 +8,7 @@ target 'MobileUp' do
   # Pods for MobileUp
 
 pod 'SnapKit'
+pod 'VK-ios-sdk'
 
   target 'MobileUpTests' do
     inherit! :search_paths
