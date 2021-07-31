@@ -49,7 +49,6 @@ class CollectionInteractor: CollectionInteractorProtocol{
 //            response?.response.items.map { print(Date(timeIntervalSince1970: $0.date))
 //                print($0.sizes[0].url)
 //            }
-            AllData.sharedData.data = response
             self.presenter?.uploadPhoto(photos: response!)
         }
     }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Response: Decodable {
     var response: Photos
@@ -28,5 +29,6 @@ struct Size: Decodable {
 class AllData {
     static let sharedData = AllData()
     
-    var data: Response?
+    var date: Double?
+    var image: UIImage?
 }

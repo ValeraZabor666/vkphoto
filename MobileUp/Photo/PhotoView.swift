@@ -29,6 +29,7 @@ class PhotoViewController: UIViewController, PhotoViewControllerProtocol {
     
     private func setImage() {
         image.backgroundColor = .lightGray
+        image.image = AllData.sharedData.image
         view.addSubview(image)
     }
     

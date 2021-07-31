@@ -69,30 +69,13 @@ class CollectionViewController: UIViewController, CollectionViewControllerProtoc
                                                       for: indexPath) as! CollectionViewCell
         let last = photos?.response.items[indexPath.row].sizes
         cell.set(data: (photos?.response.items[indexPath.row].sizes[last!.count - 1])!)
-        
-//        if photos?.response.count != nil {
-//            let image = UIImageView()
-//            image.layer.cornerRadius = 10
-//            image.clipsToBounds = true
-//            image.contentMode = .scaleToFill
-//            let last = photos?.response.items[indexPath.row].sizes
-//            let imageURL: URL = (photos?.response.items[indexPath.row].sizes[last!.count - 1].url)!
-//            print(imageURL)
-//            let queue = DispatchQueue.global(qos: .utility)
-//            queue.async {
-//                if let data = try? Data(contentsOf: imageURL) {
-//                    DispatchQueue.main.async {
-//                        image.image = UIImage(data: data)!
-//                    }
-//                }
-//            }
-//            cell.addSubview(image)
-//            image.frame = cell.frame
-//        }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let currentCell = collectionView.cellForItem(at: indexPath) as! CollectionViewCell
+        AllData.sharedData.date = photos?.response.items[indexPath.row].date
+        currentCell.setImage()
         presenter?.openPhoto()
     }
     

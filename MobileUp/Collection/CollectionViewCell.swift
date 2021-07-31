@@ -42,4 +42,8 @@ class CollectionViewCell: UICollectionViewCell {
             }
         }
     }
+    
+    func setImage() {
+        AllData.sharedData.image = image.image
+    }
 }
