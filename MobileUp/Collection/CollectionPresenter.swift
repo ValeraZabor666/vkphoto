@@ -12,7 +12,9 @@ protocol CollectionPresenterProtocol {
     var interactor: CollectionInteractorProtocol? { get set }
     var view: CollectionViewControllerProtocol? { get set }
     
+    func getPhotos()
     func openPhoto()
+    func uploadPhoto(photos: Response)
 }
 
 class CollectionPresenter: CollectionPresenterProtocol {
@@ -23,5 +25,13 @@ class CollectionPresenter: CollectionPresenterProtocol {
     
     func openPhoto() {
         router?.openPhotoScreen()
+    }
+    
+    func getPhotos() {
+        interactor?.getURL()
+    }
+    
+    func uploadPhoto(photos: Response) {
+        view?.updateCollection(collection: photos)
     }
 }

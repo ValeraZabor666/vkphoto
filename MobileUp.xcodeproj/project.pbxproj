@@ -31,6 +31,7 @@
 		0479957326B001C300D0EDAB /* PhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479957226B001C300D0EDAB /* PhotoRouter.swift */; };
 		047996CC26B16B4B00D0EDAB /* Pods_MobileUp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79E571EA29D43C882AD54823 /* Pods_MobileUp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		047996F626B2A3EC00D0EDAB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047996F526B2A3EC00D0EDAB /* AuthService.swift */; };
+		0479971026B57CB700D0EDAB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479970F26B57CB700D0EDAB /* CollectionViewCell.swift */; };
 		4C2CAF00FC8E9C83E0C086D8 /* Pods_MobileUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250C6CC7228FD6EACC65CB70 /* Pods_MobileUpTests.framework */; };
 		A05165E1EF4537BB0D628023 /* Pods_MobileUp_MobileUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51BCBFCF9555BB2E955014D /* Pods_MobileUp_MobileUpUITests.framework */; };
 		B87C14B83367102F9542C700 /* Pods_MobileUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6390C1F5C052F2A97803B5C2 /* Pods_MobileUp.framework */; };
@@ -101,6 +102,7 @@
 		047996E426B17B2D00D0EDAB /* libSnapKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSnapKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		047996E626B17B3200D0EDAB /* libVK-ios-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libVK-ios-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		047996F526B2A3EC00D0EDAB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		0479970F26B57CB700D0EDAB /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		250C6CC7228FD6EACC65CB70 /* Pods_MobileUpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileUpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		392821F80E748A8E05B2E3FF /* Pods-MobileUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileUpTests.release.xcconfig"; path = "Target Support Files/Pods-MobileUpTests/Pods-MobileUpTests.release.xcconfig"; sourceTree = "<group>"; };
 		502D4D52C21A4D7F78C98A91 /* Pods-MobileUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileUpTests.debug.xcconfig"; path = "Target Support Files/Pods-MobileUpTests/Pods-MobileUpTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				0479954526B0014800D0EDAB /* CollectionView.swift */,
+				0479970F26B57CB700D0EDAB /* CollectionViewCell.swift */,
 				0479954A26B0015900D0EDAB /* CollectionInteractor.swift */,
 				0479954F26B0016700D0EDAB /* CollectionPresenter.swift */,
 				0479955426B0017200D0EDAB /* CollectionEntity.swift */,
@@ -526,6 +529,7 @@
 				0479956426B0019E00D0EDAB /* PhotoInteractor.swift in Sources */,
 				0479955026B0016700D0EDAB /* CollectionPresenter.swift in Sources */,
 				0479956E26B001B200D0EDAB /* PhotoEntity.swift in Sources */,
+				0479971026B57CB700D0EDAB /* CollectionViewCell.swift in Sources */,
 				0476AD9E26AF510100FFE7BA /* MobileUp.xcdatamodeld in Sources */,
 				0479954B26B0015900D0EDAB /* CollectionInteractor.swift in Sources */,
 				0479955A26B0017D00D0EDAB /* CollectionRouter.swift in Sources */,

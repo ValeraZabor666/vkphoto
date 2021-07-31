@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 import SnapKit
-//import VK_ios_sdk
 
 protocol LoginViewControllerProtocol {
     var presenter: LoginPresenterProtocol? { get set }
