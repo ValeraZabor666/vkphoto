@@ -32,18 +32,33 @@ class CollectionViewCell: UICollectionViewCell {
         image.clipsToBounds = true
         image.contentMode = .scaleToFill
         let imageURL: URL = data.url
-        print(imageURL)
+        
+        if let cachedResponse = URLCache.shared.cachedResponse(for: URLRequest(url: imageURL)) {
+            image.image = UIImage(data: cachedResponse.data)
+            return
+        }
+        
         let queue = DispatchQueue.global(qos: .utility)
         queue.async {
-            if let data = try? Data(contentsOf: imageURL) {
-                DispatchQueue.main.async {
-                    self.image.image = UIImage(data: data)!
+            let dataTask = URLSession.shared.dataTask(with: imageURL) { [weak self] data,response,error in
+                if let data = data, let response = response {
+                    DispatchQueue.main.async {
+                        self!.image.image = UIImage(data: data)!
+                        self?.imageToCache(data: data, response: response)
+                    }
                 }
             }
+            dataTask.resume()
         }
     }
     
     func setImage() {
         AllData.sharedData.image = image.image
+    }
+    
+    private func imageToCache(data: Data, response: URLResponse) {
+        guard let responseURL = response.url else { return }
+        let cachedResponse = CachedURLResponse(response: response, data: data)
+        URLCache.shared.storeCachedResponse(cachedResponse, for: URLRequest(url: responseURL))
     }
 }
