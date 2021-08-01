@@ -28,7 +28,7 @@ class CollectionViewCell: UICollectionViewCell {
     }
     
     func set(data: Size) {
-        image.layer.cornerRadius = 10
+        image.layer.cornerRadius = 1
         image.clipsToBounds = true
         image.contentMode = .scaleToFill
         let imageURL: URL = data.url

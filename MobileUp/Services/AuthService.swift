@@ -55,6 +55,8 @@ class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
         print(#function)
         if result.token != nil {
             delegate?.authServiceSignIn()
+        } else {
+            
         }
     }
     

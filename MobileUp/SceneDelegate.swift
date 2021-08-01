@@ -23,14 +23,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, AuthServiceDelegete {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let loginScreenRouter = LoginRouter.start()
-        let initialVC = loginScreenRouter.entry
-        
         authService = AuthService()
         authService.delegate = self
         
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = UINavigationController(rootViewController: initialVC!)
+        
+        let scope = ["offline"]
+        VKSdk.wakeUpSession(scope) { (state, error) in
+            switch state {
+            case .authorized:
+                self.authServiceSignIn()
+            default:
+                let loginScreenRouter = LoginRouter.start()
+                let initialVC = loginScreenRouter.entry
+                window.rootViewController = UINavigationController(rootViewController: initialVC!)
+            }
+        }
         self.window = window
         window.makeKeyAndVisible()
     }
@@ -94,7 +102,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, AuthServiceDelegete {
         let loginScreenRouter = LoginRouter.start()
         let initialVC = loginScreenRouter.entry
         window?.rootViewController = UINavigationController(rootViewController: initialVC!)
-    }
 
+    }
+    
 }
 

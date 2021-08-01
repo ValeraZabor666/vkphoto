@@ -46,8 +46,9 @@ class CollectionViewController: UIViewController, CollectionViewControllerProtoc
     private func setCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-
-        layout.itemSize = CGSize(width: view.frame.size.width / 2 - 8,
+        layout.minimumLineSpacing = 1
+        layout.minimumInteritemSpacing = 1
+        layout.itemSize = CGSize(width: view.frame.size.width / 2 - 1,
                                  height: view.frame.size.height / 3)
         collectionView = UICollectionView(frame: .zero,
                                           collectionViewLayout: layout)
@@ -56,7 +57,7 @@ class CollectionViewController: UIViewController, CollectionViewControllerProtoc
         }
         collectionView.register(CollectionViewCell.self,
                                 forCellWithReuseIdentifier: CollectionViewCell.id)
-        collectionView.backgroundColor = .darkGray
+        collectionView.backgroundColor = .white
         collectionView.delegate = self
         collectionView.dataSource = self
         view.addSubview(collectionView)
@@ -85,8 +86,8 @@ class CollectionViewController: UIViewController, CollectionViewControllerProtoc
     }
     
     private func setNavigationParams() {
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
-            title: "Logout",
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Выход",
             style: .plain,
             target: self,
             action: #selector(didTapAdd))

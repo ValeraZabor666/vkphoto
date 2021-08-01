@@ -17,6 +17,7 @@ class LoginViewController: UIViewController, LoginViewControllerProtocol {
     
     var presenter: LoginPresenterProtocol?
     private var loginButton = UIButton()
+    private var mobileUpLabel = UILabel()
     private var authService: AuthService!
     
     override func viewDidLoad() {
@@ -26,6 +27,7 @@ class LoginViewController: UIViewController, LoginViewControllerProtocol {
         
         setAppearance()
         setButton()
+        setLabel()
     }
     
     override func viewDidLayoutSubviews() {
@@ -34,30 +36,45 @@ class LoginViewController: UIViewController, LoginViewControllerProtocol {
     }
     
     private func setAppearance() {
-        view.backgroundColor = .darkGray
+        view.backgroundColor = .white
+    }
+    
+    private func setLabel() {
+        mobileUpLabel.backgroundColor = .white
+        mobileUpLabel.textColor = .black
+        mobileUpLabel.sizeToFit()
+        mobileUpLabel.numberOfLines = 2
+        mobileUpLabel.text = "Mobile Up\nGallery"
+        mobileUpLabel.font = UIFont.systemFont(ofSize: 48)
+        mobileUpLabel.font = UIFont.boldSystemFont(ofSize: 48)
+        view.addSubview(mobileUpLabel)
     }
     
     private func setButton() {
-        loginButton.backgroundColor = .lightGray
-        loginButton.layer.cornerRadius = 20
+        loginButton.backgroundColor = .black
+        loginButton.layer.cornerRadius = 10
         loginButton.clipsToBounds = true
-        loginButton.setTitle("Login", for: .normal)
-        loginButton.titleLabel?.font = UIFont.systemFont(ofSize: 25)
+        loginButton.setTitle("Вход через VK", for: .normal)
+        loginButton.titleLabel?.textColor = .white
         loginButton.addTarget(self, action: #selector(loginAction), for: .touchUpInside)
         view.addSubview(loginButton)
     }
     
     @objc func loginAction() {
         authService.wakeUpSession()
-//        presenter?.authentication()
     }
     
     private func setConstraints() {
         loginButton.snp.makeConstraints { maker in
-            maker.centerX.equalToSuperview()
-            maker.centerY.equalToSuperview()
-            maker.width.equalTo(view.frame.width / 2.5)
-            maker.height.equalTo(view.frame.height / 5)
+            maker.left.right.equalToSuperview().inset(50)
+            maker.bottom.equalToSuperview().inset(50)
+            maker.height.equalTo(70)
+        }
+        
+        mobileUpLabel.snp.makeConstraints { maker in
+            maker.top.equalToSuperview().inset(70)
+            maker.left.right.equalToSuperview().inset(20)
+            maker.height.equalTo(250)
         }
     }
     

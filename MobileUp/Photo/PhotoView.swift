@@ -19,12 +19,13 @@ class PhotoViewController: UIViewController, PhotoViewControllerProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         setImage()
         setNavigation()
     }
     
     override func viewDidLayoutSubviews() {
-        image.frame = view.bounds
+        setImageConstraints()
     }
     
     private func setImage() {
@@ -39,7 +40,7 @@ class PhotoViewController: UIViewController, PhotoViewControllerProtocol {
     
     private func setNavigation() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(
-            barButtonSystemItem: .save,
+            barButtonSystemItem: .action,
             target: self,
             action: #selector(savePhoto))
     }
@@ -50,5 +51,12 @@ class PhotoViewController: UIViewController, PhotoViewControllerProtocol {
         let avc = UIActivityViewController(activityItems: items,
                                            applicationActivities: nil)
         self.present(avc, animated: true, completion: nil)
+    }
+    
+    private func setImageConstraints() {
+        image.snp.makeConstraints { maker in
+            maker.width.equalToSuperview()
+            maker.top.bottom.equalToSuperview().inset(150)
+        }
     }
 }
