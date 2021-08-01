@@ -30,6 +30,10 @@ class PhotoViewController: UIViewController, PhotoViewControllerProtocol {
     private func setImage() {
         image.backgroundColor = .lightGray
         image.image = AllData.sharedData.image
+        let dateFormatter = DateFormatter()
+        let date = Date(timeIntervalSince1970: AllData.sharedData.date!)
+        dateFormatter.dateStyle = .short
+        title = dateFormatter.string(for: date)
         view.addSubview(image)
     }
     
@@ -41,7 +45,7 @@ class PhotoViewController: UIViewController, PhotoViewControllerProtocol {
     }
     
     @objc func savePhoto() {
-        let items: [Any] = [UIImage(named: "123")!]
+        let items: [Any] = [AllData.sharedData.image!]
         
         let avc = UIActivityViewController(activityItems: items,
                                            applicationActivities: nil)

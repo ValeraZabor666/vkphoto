@@ -88,6 +88,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, AuthServiceDelegete {
     func authServiceSignInDidFail() {
         print(#function)
     }
+    
+    func logOut() {
+        VKSdk.forceLogout()
+        let loginScreenRouter = LoginRouter.start()
+        let initialVC = loginScreenRouter.entry
+        window?.rootViewController = UINavigationController(rootViewController: initialVC!)
+    }
 
 }
 

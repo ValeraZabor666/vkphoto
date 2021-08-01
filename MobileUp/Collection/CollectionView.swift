@@ -19,11 +19,16 @@ class CollectionViewController: UIViewController, CollectionViewControllerProtoc
     var presenter: CollectionPresenterProtocol?
     private var collectionView: UICollectionView?
     var photos: Response?
+    private var authService: AuthService!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        authService = SceneDelegate.shared().authService
+        
         presenter?.getPhotos()
         setCollectionView()
+        setNavigationParams()
     }
     
     override func viewDidLayoutSubviews() {
@@ -79,5 +84,15 @@ class CollectionViewController: UIViewController, CollectionViewControllerProtoc
         presenter?.openPhoto()
     }
     
+    private func setNavigationParams() {
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: "Logout",
+            style: .plain,
+            target: self,
+            action: #selector(didTapAdd))
+    }
     
+    @objc func didTapAdd() {
+        authService.logOut()
+    }
 }

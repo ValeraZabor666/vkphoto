@@ -12,6 +12,7 @@ protocol AuthServiceDelegete: class {
     func authServiceShouldShow(viewController: UIViewController)
     func authServiceSignIn()
     func authServiceSignInDidFail()
+    func logOut()
 }
 
 class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
@@ -70,4 +71,9 @@ class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
     func vkSdkNeedCaptchaEnter(_ captchaError: VKError!) {
         print(#function)
     }
+    
+    func logOut() {
+        delegate?.logOut()
+    }
+    
 }
