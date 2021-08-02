@@ -11,7 +11,7 @@ import VK_ios_sdk
 class SceneDelegate: UIResponder, UIWindowSceneDelegate, AuthServiceDelegete {
 
     var window: UIWindow?
-    var authService: AuthService!
+    var authService: AuthService?
     
     static func shared() -> SceneDelegate {
         let scene = UIApplication.shared.connectedScenes.first
@@ -24,7 +24,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, AuthServiceDelegete {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         authService = AuthService()
-        authService.delegate = self
+        if authService == nil {
+            print("NIL")
+        }
+        authService!.delegate = self
         
         let window = UIWindow(windowScene: windowScene)
         

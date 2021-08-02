@@ -29,12 +29,14 @@
 		0479956926B001A900D0EDAB /* PhotoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479956826B001A900D0EDAB /* PhotoPresenter.swift */; };
 		0479956E26B001B200D0EDAB /* PhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479956D26B001B200D0EDAB /* PhotoEntity.swift */; };
 		0479957326B001C300D0EDAB /* PhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479957226B001C300D0EDAB /* PhotoRouter.swift */; };
-		047996CC26B16B4B00D0EDAB /* Pods_MobileUp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79E571EA29D43C882AD54823 /* Pods_MobileUp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		047996F626B2A3EC00D0EDAB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047996F526B2A3EC00D0EDAB /* AuthService.swift */; };
 		0479971026B57CB700D0EDAB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479970F26B57CB700D0EDAB /* CollectionViewCell.swift */; };
+		0479973126B7DEC000D0EDAB /* Pods_MobileUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0479973026B7DEC000D0EDAB /* Pods_MobileUp.framework */; };
+		0479973226B7DEC000D0EDAB /* Pods_MobileUp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0479973026B7DEC000D0EDAB /* Pods_MobileUp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0479973726B7E16C00D0EDAB /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0479973626B7E16C00D0EDAB /* SnapKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		0479973B26B7E1A100D0EDAB /* VK_ios_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0479973A26B7E1A100D0EDAB /* VK_ios_sdk.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4C2CAF00FC8E9C83E0C086D8 /* Pods_MobileUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250C6CC7228FD6EACC65CB70 /* Pods_MobileUpTests.framework */; };
 		A05165E1EF4537BB0D628023 /* Pods_MobileUp_MobileUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51BCBFCF9555BB2E955014D /* Pods_MobileUp_MobileUpUITests.framework */; };
-		B87C14B83367102F9542C700 /* Pods_MobileUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6390C1F5C052F2A97803B5C2 /* Pods_MobileUp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,13 +57,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		047996C826B16B4800D0EDAB /* Embed Frameworks */ = {
+		0479973326B7DEC000D0EDAB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				047996CC26B16B4B00D0EDAB /* Pods_MobileUp.framework in Embed Frameworks */,
+				0479973226B7DEC000D0EDAB /* Pods_MobileUp.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +105,11 @@
 		047996E626B17B3200D0EDAB /* libVK-ios-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libVK-ios-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		047996F526B2A3EC00D0EDAB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		0479970F26B57CB700D0EDAB /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		0479971F26B7DE7E00D0EDAB /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0479972426B7DE8300D0EDAB /* VK_ios_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VK_ios_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0479973026B7DEC000D0EDAB /* Pods_MobileUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MobileUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0479973626B7E16C00D0EDAB /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0479973A26B7E1A100D0EDAB /* VK_ios_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VK_ios_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		250C6CC7228FD6EACC65CB70 /* Pods_MobileUpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileUpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		392821F80E748A8E05B2E3FF /* Pods-MobileUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileUpTests.release.xcconfig"; path = "Target Support Files/Pods-MobileUpTests/Pods-MobileUpTests.release.xcconfig"; sourceTree = "<group>"; };
 		502D4D52C21A4D7F78C98A91 /* Pods-MobileUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileUpTests.debug.xcconfig"; path = "Target Support Files/Pods-MobileUpTests/Pods-MobileUpTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,7 +127,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B87C14B83367102F9542C700 /* Pods_MobileUp.framework in Frameworks */,
+				0479973B26B7E1A100D0EDAB /* VK_ios_sdk.framework in Frameworks */,
+				0479973726B7E16C00D0EDAB /* SnapKit.framework in Frameworks */,
+				0479973126B7DEC000D0EDAB /* Pods_MobileUp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +279,11 @@
 		7C1C106727C39307D5C3F1E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0479973A26B7E1A100D0EDAB /* VK_ios_sdk.framework */,
+				0479973626B7E16C00D0EDAB /* SnapKit.framework */,
+				0479973026B7DEC000D0EDAB /* Pods_MobileUp.framework */,
+				0479972426B7DE8300D0EDAB /* VK_ios_sdk.framework */,
+				0479971F26B7DE7E00D0EDAB /* SnapKit.framework */,
 				047996E626B17B3200D0EDAB /* libVK-ios-sdk.a */,
 				047996E426B17B2D00D0EDAB /* libSnapKit.a */,
 				047996CF26B16B4E00D0EDAB /* SnapKit.framework */,
@@ -292,8 +306,8 @@
 				0476AD8C26AF510100FFE7BA /* Sources */,
 				0476AD8D26AF510100FFE7BA /* Frameworks */,
 				0476AD8E26AF510100FFE7BA /* Resources */,
-				047996C826B16B4800D0EDAB /* Embed Frameworks */,
 				1795EB4154FA61ACC7274741 /* [CP] Embed Pods Frameworks */,
+				0479973326B7DEC000D0EDAB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -710,14 +724,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U53229D9GV;
 				INFOPLIST_FILE = MobileUp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VZ666..MobileUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -730,14 +742,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U53229D9GV;
 				INFOPLIST_FILE = MobileUp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VZ666..MobileUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

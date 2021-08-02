@@ -18,7 +18,7 @@ class CollectionInteractor: CollectionInteractorProtocol{
     var presenter: CollectionPresenterProtocol?
     private let authService: AuthService
     
-    init(authService: AuthService = SceneDelegate.shared().authService) {
+    init(authService: AuthService = SceneDelegate.shared().authService!) {
         self.authService = authService
     }
     

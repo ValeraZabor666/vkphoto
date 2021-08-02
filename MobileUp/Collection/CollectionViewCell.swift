@@ -14,6 +14,7 @@ class CollectionViewCell: UICollectionViewCell {
     private var image: UIImageView = {
         let imageView = UIImageView()
         imageView.image = nil
+        imageView.image = UIImage(named: "loadingImage")
         return imageView
     }()
     
