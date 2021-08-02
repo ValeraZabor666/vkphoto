@@ -4,21 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-MobileUp-MobileUpUITests.xcscheme</key>
+		<key>Pods-VKCollection-VKCollectionUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>Pods-MobileUp.xcscheme</key>
+		<key>Pods-VKCollection.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Pods-MobileUpTests.xcscheme</key>
+		<key>Pods-VKCollectionTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

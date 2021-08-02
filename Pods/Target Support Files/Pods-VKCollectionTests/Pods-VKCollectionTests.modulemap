@@ -1,0 +1,6 @@
+framework module Pods_VKCollectionTests {
+  umbrella header "Pods-VKCollectionTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
